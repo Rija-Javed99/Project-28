@@ -36,7 +36,10 @@ function setup() {
 
 	treeObj=new tree(1050,580);
 	groundObject=new ground(width/2,600,width,20);
-	launcherObject=new launcher(stoneObj.body,{x:235,y:420})
+	
+	//create launcherObject and assign points 
+	
+	
   var render = Render.create({
     element: document.body,
     engine: engine,
@@ -95,13 +98,12 @@ function draw() {
 
 function mouseDragged()
 {
-	Matter.Body.setPosition(stoneObj.body, {x:mouseX, y:mouseY}) 
+	//move stone obj. with mouse control
 }
 
 function mouseReleased()
 {
-	launcherObject.fly();
-    // distance=int(dist(stoneObj.x,stoneObj.y,mango1.x,mango1.y));
+	//set fly for launcher obj.
 }
 
 function keyPressed() {
