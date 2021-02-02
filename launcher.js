@@ -14,10 +14,7 @@ class launcher{
 		World.add(world,this.launcher)
 	}
 
-	attach(body){
-		//attach bodyA
-	}
-
+	
 	fly()
 	{
 		//set launcher null
