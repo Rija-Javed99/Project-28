@@ -13,7 +13,7 @@ const Constraint=Matter.Constraint;
 var launchingForce=100;
 
 function preload(){
-	boy=loadImage("images/boy.png");
+	//load boy image
   }
 
 function setup() {
