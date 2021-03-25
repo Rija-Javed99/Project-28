@@ -2,9 +2,10 @@ class launcher{
 	constructor(body,anchor)
 	{
 		
-		var options={ 
-			
-			//define body and point with properties
+		var options={ bodyA:body,			 
+			pointB:anchor, 
+			stiffness:0.004, 
+			length:1
 			
 		}
 		
@@ -14,20 +15,24 @@ class launcher{
 		World.add(world,this.launcher)
 	}
 
-	
+	attach(body){
+		this.launcher.bodyA=body;
+	}
+
 	fly()
 	{
-		//set launcher null
+		this.launcher.bodyA=null;
 	}
 
 	display()
 	{
 		if(this.launcher.bodyA)
 		{
-			
-			//display point and line created
-			
-			
+			var pointA=this.bodyA.position;
+			var pointB=this.pointB
+
+			strokeWeight(2);		
+			line(pointA.x,pointA.y,pointB.x,pointB.y);
 		}
 	}
 }
